@@ -1,0 +1,169 @@
+* {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  font: 12px/20px;
+}
+.wrapper {
+  width: 100%;
+  height: 100vh;
+  padding-top: 60px;
+  box-sizing: border-box;
+  background: #ccc;
+}
+.wrapper .img-wrapper {
+  width: 50%;
+  height: 0;
+  padding-top: 50%;
+  position: relative;
+  text-align: center;
+  margin: 0 auto;
+}
+.wrapper .img-wrapper .song-img {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+}
+.wrapper .img-wrapper .song-img img {
+  width: 100%;
+  height: 100%;
+}
+.wrapper .info {
+  height: 126px;
+  margin-top: 40px;
+  width: 100%;
+  text-align: center;
+}
+.wrapper .info .song {
+  font-size: 24px;
+  line-height: 36px;
+  margin-bottom: 8px;
+  color: rgba(255, 255, 255, 0.86);
+}
+.wrapper .info .singer {
+  line-height: 16px;
+  margin-bottom: 4px;
+  color: rgba(255, 255, 255, 0.6);
+}
+.wrapper .info .album {
+  line-height: 16px;
+  margin-bottom: 4px;
+  color: rgba(255, 255, 255, 0.6);
+}
+.wrapper .proccessor {
+  width: 90%;
+  height: 20px;
+  display: flex;
+  margin: 0 auto;
+  margin-top: 20px;
+}
+.wrapper .proccessor .autotime {
+  flex: 1;
+}
+.wrapper .proccessor .totaltime {
+  flex: 1;
+}
+.wrapper .proccessor .proccess {
+  flex: 7;
+  height: 100%;
+  padding-top: 5px;
+  margin: 5px 5px;
+  overflow: hidden;
+  position: relative;
+}
+.wrapper .proccessor .proccess .light {
+  height: 2px;
+  background: rgba(255, 255, 255, 0.6);
+}
+.wrapper .proccessor .proccess .dark {
+  position: relative;
+  height: 2px;
+  top: -2px;
+  background: #ffffff;
+  transform: translateX(-100%);
+}
+.wrapper .proccessor .proccess .dark .point {
+  position: absolute;
+  right: -9px;
+  top: -4px;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: #fff;
+}
+.wrapper .footer {
+  width: 100%;
+  height: 70px;
+  margin: 0 auto;
+  position: absolute;
+  bottom: 0;
+  display: flex;
+}
+.wrapper .footer .like {
+  flex: 1;
+  margin: 5px;
+  background: url(/img/icon-like.png) no-repeat;
+}
+.wrapper .footer .like.love {
+  background: url(/img/icon-like-solid.png) no-repeat;
+}
+.wrapper .footer .prev {
+  flex: 1;
+  margin: 5px;
+  background: url(/img/icon-prev.png) no-repeat;
+}
+.wrapper .footer .play {
+  flex: 1;
+  margin: 5px;
+  background: url(/img/icon-play.png) no-repeat;
+}
+.wrapper .footer .play.playing {
+  background: url(/img/icon-pause.png) no-repeat;
+}
+.wrapper .footer .next {
+  flex: 1;
+  margin: 5px;
+  background: url(/img/icon-next.png) no-repeat;
+}
+.wrapper .footer .list {
+  flex: 1;
+  margin: 5px;
+  background: url(/img/icon-list.png) no-repeat;
+}
+.list-wrapper {
+  background: #fff;
+  position: fixed;
+  width: 100%;
+  bottom: 0;
+  transform: translateY(100%);
+  transition: transform 200ms ease-in;
+}
+.list-wrapper.show {
+  transform: translateY(0);
+}
+.list-wrapper .list-head,
+.list-wrapper .close-btn {
+  height: 50px;
+  line-height: 50px;
+  text-align: center;
+  color: rgba(0, 0, 0, 0.86);
+}
+.list-wrapper .close-btn {
+  border-top: 1px solid rgba(0, 0, 0, 0.1);
+}
+.list-wrapper li {
+  height: 20px;
+  padding: 10px;
+}
+.list-wrapper li h3 {
+  font-size: 15px;
+  color: rgba(0, 0, 0, 0.6);
+}
+.list-wrapper li h3 span {
+  font-size: 12px;
+}
+.list-wrapper li.showList h3 {
+  color: rgba(255, 0, 0, 0.86);
+}

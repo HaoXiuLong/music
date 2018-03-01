@@ -1,0 +1,174 @@
+*{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    font: 12px/20px;
+}
+.wrapper{
+    width: 100%;
+    height: 100vh;
+    padding-top: 60px;
+    box-sizing: border-box;
+    background: #ccc;
+    .img-wrapper{
+        width: 50%;
+        height: 0;
+        padding-top: 50%;
+        position: relative;
+        text-align: center;
+        margin: 0 auto;
+        .song-img{
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            left: 0;
+            top : 0;
+            img{
+                width: 100%;
+                height: 100%;
+            }
+        }
+    }
+    .info{
+        height: 126px;
+        margin-top: 40px;
+        width: 100%;
+        text-align: center;
+        .song{
+            font-size: 24px;
+            line-height: 36px;
+            margin-bottom: 8px;
+            color: rgba(255, 255, 255, .86)
+        }
+        .singer{
+            line-height: 16px;
+            margin-bottom: 4px;
+            color: rgba(255, 255, 255, .6)
+        }
+        .album{
+            line-height: 16px;
+            margin-bottom: 4px;
+            color: rgba(255, 255, 255, .6)
+        }
+    }
+    .proccessor{
+        width: 90%;
+        height: 20px;
+        display: flex;
+        margin: 0 auto;
+        margin-top: 20px;
+ 
+        .autotime{
+            flex: 1;
+        }
+        .totaltime{
+            flex: 1;
+        }
+        .proccess{
+            flex:7;
+            height: 100%;
+            padding-top: 5px;
+            margin: 5px 5px;
+            overflow: hidden;
+            position: relative;
+            .light{  
+                height: 2px;     
+                background: rgba(255, 255, 255, .6);
+            }
+            .dark{
+                position: relative;
+                height: 2px; 
+                top: -2px;
+                background: rgba(255,255,255,1);
+                transform: translateX(-100%);
+                .point{
+                    position: absolute;
+                    right: -9px;
+                    top: -4px;
+                    width: 10px;
+                    height: 10px;
+                    border-radius: 50%;
+                    background: #fff;
+                } 
+            }   
+        }  
+    }
+    .footer{
+        width: 100%;
+        height: 70px;
+        margin: 0 auto;
+        position: absolute;
+        bottom: 0;
+        display: flex;
+        .like{
+            flex: 1;
+            margin: 5px;
+            background: url(/img/icon-like.png) no-repeat;
+            &.love{
+                background: url(/img/icon-like-solid.png) no-repeat;
+            }
+        }
+        .prev{
+            flex: 1;
+            margin: 5px;
+            background: url(/img/icon-prev.png) no-repeat;
+        }
+        .play{
+            flex:1;
+            margin: 5px;
+            background: url(/img/icon-play.png) no-repeat;
+            &.playing{
+                background: url(/img/icon-pause.png) no-repeat;
+            }
+        }
+        .next{
+            flex: 1;
+            margin: 5px;
+            background: url(/img/icon-next.png) no-repeat;
+        }
+        .list{
+            flex: 1;
+            margin: 5px;
+            background: url(/img/icon-list.png) no-repeat;
+        }
+    }
+}
+.list-wrapper{
+    background: #fff;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+    transform: translateY(100%);
+    transition: transform 200ms ease-in;
+    &.show{
+        transform: translateY(0);
+    }
+    .list-head,.close-btn{
+        height: 50px;
+        line-height: 50px;
+        text-align: center;
+        color: rgba(0, 0, 0, .86);
+    }
+    .close-btn{
+        border-top: 1px solid rgba(0, 0, 0, .1);
+    }
+    li{
+        height: 20px;
+        padding: 10px;
+        border-top: 1px solid rgba(0, 0, 0, .1);
+        h3{
+            font-size: 15px;
+            color: rgba(0,  0, 0, .6);
+            span{
+                font-size: 12px;
+            }
+        }  
+        &.showList{
+            h3{
+                color: rgba(255, 0, 0, .86);
+            }
+            span{
+                color: rgba(255, 0, 0, .6);
+        }
+    }
+}
